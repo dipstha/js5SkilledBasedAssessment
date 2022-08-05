@@ -15,37 +15,37 @@ class Person {
       get age() {
         return this._age;
       }
-      set firstName (firstName){
-        this._firstName = firstName
+      // set firstName (firstName){
+      //   this._firstName = firstName
+      // }
+      // set lastName (lastName){
+      //   this._lastName = lastName
+      // }
+      // set age(age) {
+      //   this._age = age;
+      
+      description(){
+customerContact1.innerHTML = `Hello ${this._firstName} ${this._lastName} you are ${this._age} old.`
       }
-      set lastName (lastName){
-        this._lastName = lastName
-      }
-      set age(age) {
-        this._age = age;
-      }
-     
     }
-
-
-
-    const user = new Person ('Rahul', 'Shrestha', 'Ten'); 
-   
+     
     
 
-      const fName = document.getElementById("firstName");
-      const lName = document.getElementById("lastName");
-      const ageNumber = document.getElementById("age"); 
+
+       
  
 
      
       function inputInfo  () {
-       fName.innerHTML = user.firstName();
-       lName.innerHTML = user.lastName();
-       ageNumber.innerHTML = user.age();
+        const fName = document.getElementById("firstName").value;
+      const lName = document.getElementById("lastName").value;
+      const ageNumber = document.getElementById("age").value;
+      const user = new Person (fName, lName,ageNumber); 
+      user.description();
     }
-
+const customerContact1 = document.getElementById('contactCustomer');
     const btn = document.getElementById("button");
 
          btn.addEventListener('click', inputInfo);
+
     
